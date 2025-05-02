@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net9.0</TargetFramework>
@@ -7,13 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\KBD5.Shared.Domain\KBD5.Shared.Persistence.csproj" />
-		<ProjectReference Include="..\..\KBD5.Shared\KBD5.ServiceDefaults\KBD5.ServiceDefaults.csproj" />
 		<ProjectReference Include="..\..\KBD5.Shared\KBD5.Shared.Domain\KBD5.Shared.Persistence.csproj" />
+		<ProjectReference Include="..\..\MyShop.ServiceDefaults\MyShop.ServiceDefaults.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
