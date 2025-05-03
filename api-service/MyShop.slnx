@@ -4,11 +4,12 @@
   </Folder>
   <Folder Name="/Shared/">
     <Project Path="KBD5.Shared/KBD5.Shared.Domain/KBD5.Shared.Persistence.csproj" />
+    <Project Path="KBD5.Shared\KBD5.Shared.Common\KBD5.Shared.Common.csproj" Type="Classic C#" />
     <Project Path="MyShop.ServiceDefaults/MyShop.ServiceDefaults.csproj" />
   </Folder>
   <Folder Name="/SolutionItem/">
     <File Path=".gitignore" />
     <File Path="Directory.Packages.props" />
   </Folder>
-  <Project Path="MyShop.AppHost/MyShop.AppHost.csproj" Id="ece2adfc-b056-4f1f-b394-3f4139243993" />
+  <Project Path="MyShop.AppHost/MyShop.AppHost.csproj" />
 </Solution>
