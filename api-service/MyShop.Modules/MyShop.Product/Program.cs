@@ -1,15 +1,12 @@
-using System.Reflection;
-using FluentValidation;
+using MyShop.ServiceDefaults;
 using Scalar.AspNetCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddServiceDefaults();
+builder.AddApiServiceDefaults(Assembly.GetExecutingAssembly());
 
 builder.Services.AddOpenApi();
-
-// Add FluentValidation
-builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

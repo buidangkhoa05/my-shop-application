@@ -1,6 +1,20 @@
-﻿namespace MyShop.ServiceDefaults;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Reflection;
 
-public class ApiServiceExtensions
+namespace MyShop.ServiceDefaults;
+
+public static class ApiServiceExtensions
 {
-    
+    public static TBuilder AddApiServiceDefaults<TBuilder>(this TBuilder builder, Assembly assembly)
+        where TBuilder : IHostApplicationBuilder
+    {
+        builder.AddServiceDefaults();
+
+        builder.Services.AddValidatorsFromAssembly(assembly, includeInternalTypes: true);
+
+        return builder;
+    }
 }
