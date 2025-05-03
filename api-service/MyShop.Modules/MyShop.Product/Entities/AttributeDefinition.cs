@@ -4,9 +4,9 @@ namespace MyShop.Product.Entities;
 
 public class AttributeDefinition : BaseEntity
 {
-    public string Name { get; set; } = null!;  // e.g. "Weight"
-    public string? Unit { get; set; }          // e.g. "kg", "cm"
-    public string DataType { get; set; } = "string";
+    public string Name { get; set; } = null!;
+    public string? Unit { get; set; }
+    public AttributeDefinitionDataType DataType { get; set; } = AttributeDefinitionDataType.String;
 }
 
 public enum AttributeDefinitionDataType
