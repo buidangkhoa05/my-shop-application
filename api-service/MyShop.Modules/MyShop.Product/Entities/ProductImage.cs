@@ -1,8 +1,8 @@
-﻿using KBD5.Shared.Persistence.Entity;
+﻿using KBD5.Shared.Persistence.Entities;
 
 namespace MyShop.Product.Entities;
 
-public class ProductImage : BaseEntity
+public class ProductImage : Entity
 {
     public required string ImageUrl { get; set; }
     public required string ProductId { get; set; }

@@ -1,8 +1,8 @@
-﻿using KBD5.Shared.Persistence.Entity;
+﻿using KBD5.Shared.Persistence.Entities;
 
 namespace MyShop.Product.Entities;
 
-public class Product : BaseEntity
+public class Product : Entity
 {
     public required string Sku { get; set; }
 

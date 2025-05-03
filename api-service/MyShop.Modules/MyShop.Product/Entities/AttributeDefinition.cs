@@ -1,8 +1,8 @@
-﻿using KBD5.Shared.Persistence.Entity;
+﻿using KBD5.Shared.Persistence.Entities;
 
 namespace MyShop.Product.Entities;
 
-public class AttributeDefinition : BaseEntity
+public class AttributeDefinition : Entity
 {
     public string Name { get; set; } = null!;
     public string? Unit { get; set; }
