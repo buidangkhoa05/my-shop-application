@@ -10,13 +10,19 @@ public record Result(bool IsSuccess, Error? Error)
     }
 
     public static Result<TValue> Success<TValue>(TValue value)
-        => new(value, true, Error.None);
+    {
+        return new Result<TValue>(value, true, Error.None);
+    }
 
     public static Result Failure(Error error)
-        => new(false, error);
+    {
+        return new Result(false, error);
+    }
 
     public static Result<TValue> Failure<TValue>(Error error)
-        => new(default, false, error);
+    {
+        return new Result<TValue>(default, false, error);
+    }
 }
 
 public record Result<TValue> : Result
@@ -34,7 +40,9 @@ public record Result<TValue> : Result
         : throw new InvalidOperationException("The value of a failure result can't be accessed.");
 
     public static implicit operator Result<TValue>(TValue? value)
-        => value is not null
+    {
+        return value is not null
             ? Success(value)
             : Failure<TValue>(Error.NullValue);
+    }
 }

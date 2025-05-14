@@ -13,7 +13,11 @@ public static class ApiServiceExtensions
     {
         builder.AddServiceDefaults();
 
+        // FluentValidation
         builder.Services.AddValidatorsFromAssembly(assembly, includeInternalTypes: true);
+
+        // MediatR
+        builder.Services.AddMediatR(cfg => { cfg.RegisterServicesFromAssembly(assembly); });
 
         return builder;
     }

@@ -8,7 +8,6 @@ public class Category : Entity
 
     public string? ParentId { get; set; }
 
-
     public Category? Parent { get; set; }
 
     public ICollection<Category>? SubCategories { get; set; }

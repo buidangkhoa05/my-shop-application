@@ -12,13 +12,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\KBD5.Shared\KBD5.Shared.Common\KBD5.Shared.Common.csproj" />
 		<ProjectReference Include="..\..\KBD5.Shared\KBD5.Shared.Domain\KBD5.Shared.Persistence.csproj" />
 		<ProjectReference Include="..\..\MyShop.ServiceDefaults\MyShop.ServiceDefaults.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Configurations\" />
-		<Folder Include="Features\" />
 		<Folder Include="Middlewares\" />
 	</ItemGroup>
 
